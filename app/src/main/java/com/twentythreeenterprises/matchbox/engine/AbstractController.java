@@ -1,5 +1,7 @@
 package com.twentythreeenterprises.matchbox.engine;
 
+import com.twentythreeenterprises.matchbox.matchzone.UserCard;
+
 /**
  * Created by bwelton on 3/15/18.
  */
@@ -33,9 +35,9 @@ public interface AbstractController {
 
     public void rejectMatch();
 
-    public void rateMatch(int value, Review review);
+    public void rateMatch(int value, String review);
 
-    public void rateMatchmaker(int value, Review review);
+    public void rateMatchmaker(int value, String review);
 
     /**
      * Return the next Matchcard object
@@ -43,9 +45,9 @@ public interface AbstractController {
      * @// by request on front end?
      * @return
      */
-    public Matchcard nextMatch();
+    public UserCard nextMatch();
 
-    public Matchcard nextMatchee();
+    public UserCard nextMatchee();
 
 
 }
