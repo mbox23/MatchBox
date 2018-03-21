@@ -1,11 +1,12 @@
 package com.twentythreeenterprises.matchbox.matchzone;
 
 import android.content.Context;
+import android.support.constraint.ConstraintLayout;
+import android.util.AttributeSet;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
-import android.widget.RelativeLayout;
 
 import com.twentythreeenterprises.matchbox.R;
 
@@ -16,11 +17,21 @@ import com.twentythreeenterprises.matchbox.R;
  * Created by bwelton on 3/20/18.
  */
 
-public class UserTray extends RelativeLayout implements GestureDetector.OnGestureListener{
+public class UserTray extends ConstraintLayout implements GestureDetector.OnGestureListener{
     private final int TRAY_LAYOUT = R.layout.user_tray;
 
     public UserTray(Context context) {
         super(context);
+        initializeLayout(context);
+    }
+
+    public UserTray(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        initializeLayout(context);
+    }
+
+    public UserTray(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
         initializeLayout(context);
     }
 

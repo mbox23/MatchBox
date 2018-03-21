@@ -7,10 +7,10 @@
     tools:context="com.twentythreeenterprises.matchbox.matchzone.MatchZone">
 
     <LinearLayout
+        android:id="@+id/user_trays"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:id="@+id/user_trays">
+        android:orientation="vertical">
 
         <com.twentythreeenterprises.matchbox.matchzone.UserTray
             android:layout_width="match_parent"
@@ -25,12 +25,12 @@
             android:layout_weight="1"
             android:id="@+id/lower_tray">
         </com.twentythreeenterprises.matchbox.matchzone.UserTray>
+
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/button_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:id="@+id/button_bar">
-    </LinearLayout>
+        android:layout_gravity="center_vertical"></RelativeLayout>
 </FrameLayout>
