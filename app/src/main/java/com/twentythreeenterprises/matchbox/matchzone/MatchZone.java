@@ -7,8 +7,11 @@ import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.twentythreeenterprises.matchbox.R;
+import com.twentythreeenterprises.matchbox.engine.Controller;
 
 public class MatchZone extends AppCompatActivity {
+    private Controller myController;
+
     private UserTray upperTray, lowerTray;
     private RelativeLayout buttonBar;
 
@@ -22,12 +25,15 @@ public class MatchZone extends AppCompatActivity {
 
     // TODO: 3/21/18 Initialize the controller and the socket, possibly fill trays
     private void initializeController(){
-
+        myController = new Controller();
     }
 
     private void initializeLayout(){
-//        upperTray = findViewById(R.id.upper_tray);
-//        lowerTray = findViewById(R.id.lower_tray);
-//        buttonBar = findViewById(R.id.button_bar);
+        upperTray = findViewById(R.id.upper_tray);
+        lowerTray = findViewById(R.id.lower_tray);
+        buttonBar = findViewById(R.id.button_bar);
+
+        upperTray.initializeTray(myController);
+        lowerTray.initializeTray(myController);
     }
 }

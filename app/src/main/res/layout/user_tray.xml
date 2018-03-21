@@ -6,7 +6,7 @@
     android:layout_weight="1">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/profile_image"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
@@ -61,6 +61,7 @@
         app:layout_constraintBottom_toTopOf="@+id/lower_username_margin" />
 
     <ListView
+        android:id="@+id/description"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/lower_margin"
