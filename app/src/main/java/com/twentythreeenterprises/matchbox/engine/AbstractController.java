@@ -22,10 +22,9 @@ public interface AbstractController {
      * @// TODO: 3/15/18 Security concerns. Need to address at what stage we hash passwords 
      * @// TODO: 3/15/18 Eventually may need to return data structure to autoload info
      * @param username
-     * @param password
      * @return
      */
-    public boolean validateAccount(String username, String password);
+    public boolean validateAccount(String username);
 
     public void changeSetting(String settingName, String value);
 
