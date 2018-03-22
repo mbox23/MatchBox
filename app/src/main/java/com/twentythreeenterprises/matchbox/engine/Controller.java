@@ -13,8 +13,8 @@ public class Controller implements AbstractController {
     }
 
     @Override
-    public boolean validateAccount(String username, String password) {
-        return false;
+    public boolean validateAccount(String username) {
+        return true;
     }
 
     @Override
